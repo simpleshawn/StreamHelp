@@ -11,7 +11,7 @@ plrvector = game.Players.LocalPlayer.Character.HumanoidRootPart.Position -- Save
 -- ↓↓ Abusing ModuleScripts content ↓↓ --
 for i,v in pairs(getgc(true)) do                          -- Returns every existing thing in the game you can access
     if type(v) == "table" and rawget(v, "MaxDepth") then  -- If the item is a table (a table is a value but a table is a table too) and rawget to avoid metatables
-        v.MaxDepth = -2147483647                          -- max int32 value
+        v.MaxDepth = -2147483648                          -- min int32 value
     end
 end
 
